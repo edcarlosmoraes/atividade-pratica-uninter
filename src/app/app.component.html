@@ -1,0 +1,147 @@
+<nav class="navbar navbar-inverse navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+        aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">UNINTER</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Sobre mim</a></li>
+        <li><a href="/curriculo">Currículo</a></li>
+        <li><a href="/portfolio">Portifólio</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="row">
+    
+    <router-outlet></router-outlet>
+    
+
+    <!-- <h1>Ed Carlos Rige de Moraes</h1>
+
+    <img
+      src="data:image/jpeg;base64,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"
+      width="150">
+    <br><br>
+    <hr>
+
+    <h4>Resumo</h4>
+
+    <div>
+      Comecei minha carreira como assistente administrativo, ingressando na faculdade em administração, mas após o
+      primeiro
+      semestre me identifiquei mais ainda na área contábil, nela encontrei o ramo da controladoria e pude participar
+      da
+      implantação do sistema ERP SAP como Key User nos módulos CO e CO-PA, posteriormente consegui a oportunidade de
+      entrar
+      em uma grande organização que incentivava a automação de processos através de macros no excel, despertando o
+      desejo
+      de
+      entrar na área de tecnologia. Estou sempre pronto para novos desafios com o intuito de ajudar a organização e
+      adquirir
+      conhecimento, tenho facilidade para aprendizagem de rotinas e adaptação em grupos.
+    </div>
+  </div>
+
+  <br><br>
+
+
+  <br>
+  <hr>
+  <br>
+
+  <h3> Experiência Profissional </h3>
+  <ul>
+    <li>
+      Software Developer
+      <br>
+      Flieger Software - Junho 2021 à Outubro 2021
+      <br>
+      - JAVA 11;
+      <br>
+      - AWS S3, Lambda, DynamoDB;
+      <br>
+      - MongoDB;
+      <br>
+      - REST;
+      <br>
+      - NestJs;
+      <br>
+      - JIRA
+      <br>
+    </li>
+    <li>
+      Analista de Controladoria
+      <br>
+      Votorantim - Agosto 2018 à Dezembro 2020
+      <br>
+      - Registro e análise de documentos fiscais;
+      <br>
+      - Lançamento FI, análise e programação para pagamento de documentos Internacionais (Invoices);
+      <br>
+      - Interação e ajustes em conjunto com as áreas de almoxarifado, expedição e logística para identificar
+      possíveis
+      gaps;
+      <br>
+      - Criação de macro VBA Excel para análises e automatização de processos;
+      <br>
+      - Acompanhamento e manutenção de reports para verificações e tomadas de decisões;
+      <br>
+      - Elaboração e apresentação de resultados em reuniões operacionais através de indicadores KPI’s (Power Point,
+      Power BI, Excel);
+    </li>
+    <li>
+      Analista de controladoria
+      <br>
+      Grupo Abrascort - Junho 2012 à Fevereiro 2018
+      <br>
+      Assistente Controladoria
+      <br>
+      - Realização do pro-ativo para identificar possíveis erros de diferença de entrada física e fiscal da
+      mercadorias;
+      <br>
+      - Conferência de centros de custo produtivo e administrativo, realizando alocação quando necessário;
+      <br>
+      - Ajustes de possíveis erros de movimentação de mercadoria;
+      <br>
+      - Execução de decomposição de custos, rateios, cálculo de tarifa e cálculo do material ledger;
+      <br>
+      - Análise entre a controladoria e o contábil e análise de margem de contribuição;
+      <br>
+      Assistente Contábil
+      <br>
+      - Conciliação de todas as contas do passivo, ativo e de resultado das empresas do grupo, contendo empresas do
+      lucro real e lucro presumido;
+      <br>
+      - Importação e ajustes dos lotes de departamentos interligados;
+      <br>
+      - Lançamento de lotes de caixa, apropriando para as devidas despesas;
+      <br>
+      - Controle das contas através de planilhas para análise.
+    </li>
+  </ul>
+  <br>
+  <hr>
+  <h3>Reconhecimentos e Prêmios</h3>
+  <ul>
+    <li>Melhor funcionário do ano de 2016 na Empresa Abrascort Comercial e Importadora de Correntes Ltda, avaliação
+      realizada com base na média das avaliações mensais, adotando critérios como pontualidade, eficiência,
+      atendimento,
+      comportamento entre outros.</li>
+  </ul> -->
+
+</div>
